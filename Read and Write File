@@ -1,0 +1,29 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+class fileio {
+public static void main(String[] args){
+try{
+FileReader fr=new
+FileReader(&quot;C:\\Users\\ATHIRA\\IdeaProjects\\AthiraProject1\\src\\input.txt&quot;)
+;
+FileWriter fw=new
+FileWriter(&quot;C:\\Users\\ATHIRA\\IdeaProjects\\AthiraProject1\\src\\output.txt&quot;
+);
+String str=&quot;&quot;;
+int i;
+while((i=fr.read())!=-1){
+str+=(char)i;
+}
+System.out.println(str);
+fw.write(str);
+fr.close();
+fw.close();
+System.out.println(&quot;File reading and writing both done&quot;);
+}
+catch (IOException e){
+System.out.println(&quot;There are some IOException&quot;);
+}
+}
+
+}
