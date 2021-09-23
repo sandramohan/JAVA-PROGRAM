@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class biggest {
+public static void main(String[] args) {
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter first number:&quot;);
+int num1=reader.nextInt();
+System.out.print(&quot;Enter second number:&quot;);
+int num2=reader.nextInt();
+System.out.print(&quot;Enter third number:&quot;);
+int num3=reader.nextInt();
+if(num1&gt;num2&amp;&amp;num1&gt;num3)
+System.out.print(&quot;The number &quot;+num1+&quot; is bigger&quot;);
+else if(num2&gt;num1&amp;&amp;num2&gt;num3)
+System.out.print(&quot;The number &quot;+num2+&quot; is bigger&quot;);
+else
+System.out.print(&quot;The number &quot;+num3+&quot; is bigger&quot;);
+}
+}
