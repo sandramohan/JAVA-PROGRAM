@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class oddeven {
+public static void main(String[] args) {
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter a number:&quot;);
+int num=reader.nextInt();
+if(num%2==0)
+System.out.print(&quot;Even number&quot;);
+else
+System.out.print(&quot; Odd number&quot;);
+}
+}
