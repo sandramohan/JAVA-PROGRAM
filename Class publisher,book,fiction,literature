@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class publisher {
+Scanner reader=new Scanner(System.in);
+String name;
+public publisher(){
+name=&quot; &quot;;
+}
+public void input(){
+System.out.print(&quot;Enter publisher name: &quot;);
+name=reader.next();
+}
+}
+class book extends publisher {
+String bname;
+int bid;
+public book() {
+bname = &quot; &quot;;
+bid = 0;
+}
+public void binput() {
+System.out.print(&quot;Enter book id: &quot;);
+bid = reader.nextInt();
+System.out.print(&quot;Enter book name: &quot;);
+bname = reader.next();
+}
+}
+class fiction extends book{
+String fic;
+public fiction(){
+fic=&quot; &quot;;
+}
+void finput(){
+System.out.print(&quot;Specify fiction or non fiction: &quot;);
+fic=reader.next();
+}
+}
+class literature extends book {
+String lit;
+
+public literature() {
+lit = &quot; &quot;;
+}
+void linput() {
+System.out.print(&quot;Enter type of literature: &quot;);
+lit = reader.next();
+}
+public static void main(String[] args) {
+literature i = new literature();
+fiction f=new fiction();
+i.input();
+i.binput();
+f.finput();
+i.linput();
+System.out.println(&quot;\nBOOK DETAILS: &quot;);
+System.out.println(&quot;Publisher name: &quot; + i.name);
+System.out.println(&quot;Book id: &quot; + i.bid);
+System.out.println(&quot;Book name: &quot; + i.bname);
+System.out.println(&quot;Fiction or non-fiction: &quot; + f.fic);
+System.out.println(&quot;Literature type: &quot; + i.lit);
+}
+}
