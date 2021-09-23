@@ -1,0 +1,37 @@
+package arithmetic;
+import java.util.Scanner;
+public class operation {
+public static void main(String[] args) {
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter two numbers: &quot;);
+int a = reader.nextInt();
+int b = reader.nextInt();
+
+arthmtc m = new arthmtc();
+m.add(a, b);
+m.sub(a, b);
+m.div(a, b);
+m.multi(a, b);
+}
+}
+package arithmetic;
+interface arthop{
+void add(int x,int y);
+void sub(int x,int y);
+void div(int x,int y);
+void multi(int x,int y);
+}
+public class arthmtc {
+void add(int x,int y){
+System.out.println(&quot;ADDITION: &quot;+(x+y));
+}
+void sub(int x,int y){
+System.out.println(&quot;SUBTRACTION: &quot;+(x-y));
+}
+void div(int x,int y){
+System.out.println(&quot;DIVISION: &quot;+(x/y));
+}
+void multi(int x,int y){
+System.out.println(&quot;MULTIPLICATION: &quot;+(x*y));
+}
+}
