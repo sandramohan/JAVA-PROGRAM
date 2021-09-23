@@ -1,0 +1,32 @@
+//import java.util.Arrays;
+import java.util.Scanner;
+public class sort {
+public static void main(String args[]) {
+int n,j;
+String temp;
+Scanner read = new Scanner(System.in);
+
+System.out.print(&quot;Enter the size of array: &quot;);
+n = read.nextInt();
+System.out.print(&quot;Enter values: &quot;);
+String[] array = new String[n];
+for(int i = 0;i &lt; n;i++)
+{
+array[i] = read.next();
+}
+for (int i = 0; i &lt; n; i++) {
+for ( j = i + 1; j &lt; n; j++) {
+if (array[i].compareTo(array[j]) &gt; 0) {
+temp = array[i];
+array[i] = array[j];
+array[j] = temp;
+}
+}
+}
+System.out.print(&quot;Strings in Sorted Order:&quot;);
+for ( int i = 0; i &lt;n ; i++)
+{
+System.out.print(array[i] + &quot;, &quot;);
+}
+}
+}
