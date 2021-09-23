@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class shapearea {
+void area(float x){
+System.out.print(&quot;\nThe area of square is &quot;+Math.pow(x,2)+&quot; sq units\n&quot;);
+}
+void area(float x,float y){
+System.out.print(&quot;The area of rectangle is &quot;+x*y+&quot; sq units\n&quot;);
+
+}
+void area(double x){
+double z=3.14*x*x;
+System.out.print(&quot;The area of the circle is &quot;+z+&quot; sq units\n&quot; );
+}
+}
+class overload{
+public static void main(String args[]){
+float s,l,b;
+double r;
+Scanner reader=new Scanner(System.in);
+shapearea obj=new shapearea();
+System.out.print(&quot;Enter the side of square: &quot;);
+s=reader.nextFloat();
+System.out.print(&quot;Enter the length of rectangle: &quot;);
+l=reader.nextFloat();
+System.out.print(&quot;Enter the breadth of rectangle: &quot;);
+b=reader.nextFloat();
+System.out.print(&quot;Enter the radius of circle: &quot;);
+r=reader.nextDouble();
+obj.area(s);
+obj.area(l,b);
+obj.area(r);
+}
+}
