@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class tmultiple extends Thread
+{
+public void run()
+{
+System.out.println(&quot;Multiplication table of 5&quot;);
+for(int i=1;i&lt;=10;i++)
+{
+System.out.println(i+ &quot; * 5 = &quot; +i*5);
+}
+System.out.println();
+}
+}
+class tprime extends Thread
+{
+public void run()
+{
+int i,j;
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter the limit: &quot;);
+int n=reader.nextInt();
+System.out.print(&quot;Prime numbers up to &quot;+n+&quot; are: &quot;);
+for(i=2;i&lt;=n;i++)
+{
+int count=0;
+for(j=1;j&lt;=i;j++)
+{
+if(i%j==0)
+count=count+1;
+}
+if(count==2)
+System.out.print(i+&quot; &quot;);
+}
+}
+}
+class threadmulti
+
+{
+public static void main(String args[])
+{
+new tmultiple().start();
+new tprime().start();
+}
+}
