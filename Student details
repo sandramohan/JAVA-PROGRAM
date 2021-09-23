@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class stud {
+public static void main(String[] args) {
+String name;
+int roll,i;
+char[] branch;
+double mark;
+char grade;
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter student name:&quot;);
+name= reader.nextLine();
+System.out.print(&quot;Enter roll number:&quot;);
+roll=reader.nextInt();
+System.out.print(&quot;Enter branch:&quot;);
+branch=reader.next().toCharArray();
+System.out.print(&quot;Enter student mark:&quot;);
+mark=reader.nextDouble();
+System.out.print(&quot;Enter student grade:&quot;);
+grade=reader.next().charAt(0);
+System.out.println(&quot;\n\nStudent details:\nName: &quot;+name+&quot;\nRoll
+number: &quot;+roll+
+&quot;\nBranch name: &quot;);
+for(i=0;i&lt;branch.length;i++)
+System.out.print(branch[i]);
+System.out.print(&quot;\nMArk : &quot;+mark+&quot;\nGrade: &quot;+grade);
+} }
