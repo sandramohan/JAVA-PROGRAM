@@ -1,0 +1,48 @@
+import java.util.Scanner;
+interface sports {
+// float smark=0;
+void sinput();
+void soutput();
+}
+class student {
+Scanner reader=new Scanner(System.in);
+int rolln;
+float amark;
+student(){
+rolln=0;
+amark=0;
+}
+void stinput(){
+System.out.print(&quot;Enter roll number: &quot;);
+rolln=reader.nextInt();
+System.out.print(&quot;Enter academic mark: &quot;);
+amark=reader.nextFloat();
+}
+void stoutput(){
+System.out.println(&quot;\nRoll number: &quot;+rolln);
+System.out.println(&quot;Academic mark: &quot;+amark);
+}
+}
+class result extends student implements sports{
+Scanner reader=new Scanner(System.in);
+float tot,smark;
+public void sinput(){
+System.out.print(&quot;Enter sports mark: &quot;);
+smark = reader.nextFloat();
+}
+public void soutput() {
+System.out.println(&quot;Sports mark: &quot;+smark);
+tot=amark+smark;
+System.out.println(&quot;Total mark: &quot;+tot);
+}
+}
+class studinheritence{
+
+public static void main(String[] args){
+result r=new result();
+r.stinput();
+r.sinput();
+r.stoutput();
+r.soutput();
+}
+}
