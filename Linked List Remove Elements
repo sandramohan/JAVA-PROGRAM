@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+public class removefiles
+{
+public static void main(String[] args) {
+LinkedList&lt;String&gt; l_list = new LinkedList&lt;String&gt;();
+l_list.add(&quot;A&quot;);
+l_list.add(&quot;B&quot;);
+
+l_list.add(&quot;C&quot;);
+l_list.add(&quot;D&quot;);
+l_list.add(&quot;E&quot;);
+l_list.add(&quot;F&quot;);
+System.out.println(&quot;The Original linked list: &quot; + l_list);
+l_list.clear();
+System.out.println(&quot;The New linked list: &quot; + l_list);
+}
+}
