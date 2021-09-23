@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class searchelem {
+public static void main(String[] args) {
+int n,c=0;
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter number of elements:&quot;);
+n=reader.nextInt();
+int num[]=new int[n];
+System.out.println(&quot;Enter array elements:&quot;);
+for(int i=0;i&lt;n;i++)
+{
+num[i]=reader.nextInt();
+
+}
+System.out.print(&quot;Enter the element to be searched: &quot;);
+int elem=reader.nextInt();
+for(int i=0;i&lt;n;i++)
+{
+if(elem==num[i])
+{
+c++;
+}
+}
+if(c==0)
+System.out.print(&quot;Element &quot;+elem+&quot; is not found &quot;);
+else System.out.print(&quot;Element &quot; +elem+&quot; is found &quot;+c+” times” );
+}
+}
