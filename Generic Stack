@@ -1,0 +1,69 @@
+import java.util.*;
+import java.io.*;
+class stack&lt;T&gt; {
+ArrayList&lt;T&gt; A;
+int top = -1, size;
+stack(int size) {
+this.size = size;
+this.A = new ArrayList&lt;T&gt;(size);
+}
+void push(T X) {
+if (top + 1 == size) {
+System.out.println(&quot;Stack Overflow&quot;);
+} else {
+top = top + 1;
+
+if (A.size() &gt; top)
+A.set(top, X);
+else
+A.add(X);
+}
+}
+T top() {
+if (top == -1) {
+System.out.println(&quot;Stack Underflow&quot;);
+return null;
+} else
+return A.get(top);
+}
+void pop() {
+if (top == -1) {
+System.out.println(&quot;Stack Underflow&quot;);
+} else
+top--;
+}
+boolean empty() {
+return top == -1;
+}
+public String toString() {
+String Ans = &quot;&quot;;
+for (int i = 0; i &lt; top; i++) {
+Ans += String.valueOf(A.get(i)) + &quot;-&gt;&quot;;
+}
+Ans += String.valueOf(A.get(top));
+return Ans;
+}
+}
+public class genericstack {
+public static void main(String[] args)
+{
+stack&lt;Integer&gt; s1=new stack&lt;&gt;(3);
+s1.push(10);
+s1.push(20);
+s1.push(30);
+System.out.println(&quot;Integer stack s1 contains :\n&quot; + s1);
+s1.pop();
+
+System.out.println(&quot;s1 after pop :\n&quot; + s1);
+stack&lt;String&gt; s2= new stack&lt;&gt;(3);
+s2.push(&quot;Hello&quot;);
+s2.push(&quot;World&quot;);
+s2.push(&quot;Java&quot;);
+System.out.println(&quot;\nString stack s2 contents: \n&quot; + s2);
+stack&lt;Float&gt; s3= new stack&lt;&gt;(2);
+s3.push(100.0f);
+s3.push(200.0f);
+System.out.println(&quot;\nFloat stack s3 contents: \n&quot; + s3);
+System.out.println(&quot;\nTop element of s3 : \n&quot; + s3.top());
+}
+}
