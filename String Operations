@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class stringop {
+public static void main(String[] args) {
+String s1, s2,s3,s4;
+int ch,i,len,f=0;
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;\nSTRING OPERATIONS\n
+1.Length\n2.Concat\n3.Compare\n4.Copy\nEnter your choice: &quot;);
+ch=reader.nextInt();
+switch (ch){
+
+case 1:System.out.print(&quot;Enter first string: &quot;);
+s1 = reader.next();
+len=s1.length();
+System.out.print(&quot;String length is: &quot;+len);
+break;
+case 2:System.out.print(&quot;Enter first string: &quot;);
+s1 = reader.next();
+System.out.print(&quot;Enter second string: &quot;);
+s2 = reader.next();
+s4=s1.concat(s2);
+s3=s1+s2;
+System.out.print(&quot;Concatenated String: &quot;+s3);
+System.out.print(&quot;\nConcatination using library function: &quot;+s4);
+break;
+case 3:System.out.print(&quot;Enter first string: &quot;);
+s1 = reader.next();
+System.out.print(&quot;Enter second string: &quot;);
+s2 = reader.next();
+/*if(s1==s2)
+f=1;
+if(f==1)
+System.out.print(&quot;\nStrings are not equal&quot;);
+else {System.out.print(&quot;\nStrings are equal&quot;);
+}*/
+System.out.print(&quot;\nCompare using library function: &quot;+s1.equals(s2));
+break;
+case 4:System.out.print(&quot;Enter first string: &quot;);
+s1 = reader.next();
+System.out.print(&quot;Enter second string: &quot;);
+s2 = reader.next();
+s2=s1;
+System.out.print(&quot;The copied string is : &quot;+s2);
+break;
+default:System.out.print(&quot;Invalid choice&quot;);
+break;
+}
+}
+}
