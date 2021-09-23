@@ -1,0 +1,58 @@
+import java.util.Scanner;
+class product{
+String pcode,pname;
+float price;
+product(){
+pcode=&quot; &quot;;
+pname=&quot; &quot;;
+price=0;
+}
+public void input(){
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter product code :&quot;);
+pcode=reader.nextLine();
+System.out.print(&quot;Enter product name :&quot;);
+pname=reader.nextLine();
+System.out.print(&quot;Enter product price :&quot;);
+price=reader.nextFloat();
+}
+public product lowest(product p1,product p2){
+product temp=new product();
+if(this.price&lt;p1.price &amp;&amp; this.price&lt;p2.price)
+temp=this;
+else if(p1.price&lt;this.price &amp;&amp; p1.price&lt;p2.price)
+temp=p1;
+else if(p2.price&lt;this.price &amp;&amp; p2.price&lt;p1.price)
+
+temp=p2;
+return temp;
+}
+public void output() {
+System.out.println(&quot;PRODUCT CODE:&quot;+pcode);
+System.out.println(&quot;PRODUCT NAME:&quot;+pname);
+System.out.println(&quot;PRODUCT PRICE:&quot;+price+&quot;\n&quot;);
+}
+};
+public class productlowest {
+public static void main(String[] args) {
+product p1 = new product();
+product p2 = new product();
+product p3 = new product();
+product result = new product();
+System.out.print(&quot;Enter details of product1\n &quot;);
+p1.input();
+System.out.print(&quot;\nEnter details of product2\n &quot;);
+p2.input();
+System.out.print(&quot;\nEnter details of product3\n &quot;);
+p3.input();
+result = p3.lowest(p1, p2);
+System.out.println(&quot;\nDetails of Product1 &quot;);
+p1.output();
+System.out.println(&quot;Details of Product2&quot;);
+p2.output();
+System.out.println(&quot;Details of Product3&quot;);
+p3.output();
+System.out.println(&quot;Product with Lowest Price&quot;);
+result.output();
+}
+}
