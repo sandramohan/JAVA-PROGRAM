@@ -1,0 +1,10 @@
+import java.util.Scanner;
+class posneg {
+public static void main(String[] args) {
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter a number:&quot;);
+int num=reader.nextInt();
+String res=(num&gt;0) ? &quot;Positive&quot;:(num&lt;0)?&quot;Negative&quot;:&quot;Zero&quot;;
+System.out.println(&quot;The number &quot;+num+&quot; is a &quot;+res+&quot; number&quot;);
+}
+}
