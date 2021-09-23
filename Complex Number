@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class complex{
+float real;
+float imag;
+complex(){
+real=0;
+imag=0;
+}
+public void input(){
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter Real part :&quot;);
+real=reader.nextFloat();
+System.out.print(&quot;Enter imaginary part :&quot;);
+imag=reader.nextFloat();
+}
+public complex add(complex obj){
+complex c=new complex();
+c.real=real+obj.real;
+c.imag=imag+obj.imag;
+return c;
+}
+public void output() {
+if (imag &lt; 0)
+System.out.print(&quot;Complex number1: &quot; + real + &quot; &quot; + imag + &quot;i&quot;);
+else
+System.out.print(&quot;Complex number2: &quot; + real + &quot; &quot; + imag + &quot;i&quot;);
+}
+};
+public class complexadd {
+public static void main(String[] args){
+complex c1=new complex();
+complex c2=new complex();
+complex result=new complex();
+System.out.print(&quot;Enter first complex number\n &quot;);
+c1.input();
+System.out.print(&quot;Enter second complex number\n &quot;);
+c2.input();
+result = c1.add(c2);
+result.output();
+} }
