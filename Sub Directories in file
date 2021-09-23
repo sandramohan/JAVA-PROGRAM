@@ -1,0 +1,31 @@
+import java.io.File;
+public class files {
+static void recursivePrint(File[] arr,int index,int level){
+if(index==arr.length)
+return;
+for(int i=0;i&lt;level;i++)
+System.out.print(&quot;\t&quot;);
+if(arr[index].isFile())
+System.out.println(arr[index].getName());
+else if(arr[index].isDirectory())
+{
+System.out.println(&quot;[&quot; +arr[index].getName() + &quot;]&quot;);
+recursivePrint(arr[index].listFiles(),0,level+1);
+}
+recursivePrint(arr,++index,level);
+}
+public static void main(String[] args){
+String
+maindirpath=&quot;C:\\Users\\ATHIRA\\IdeaProjects\\AthiraProject1\\src\\arithme
+tic&quot;;
+File maindir=new File(maindirpath);
+if(maindir.exists() &amp;&amp; maindir.isDirectory()){
+File arr[]=maindir.listFiles();
+
+System.out.println(&quot;***************************************&quot;);
+System.out.println(&quot;Files from main directory :&quot; +maindir);
+System.out.println(&quot;***************************************&quot;);
+recursivePrint(arr,0,0);
+}
+}
+}
