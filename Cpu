@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class cpuinfo{
+int price;
+class Processor{
+String Manufacturer, cores;
+}
+static class Ram{
+String Manufacturer;
+int mem;
+}
+}
+class Computer{
+public static void main(String args[]){
+cpuinfo cpu = new cpuinfo();
+cpuinfo.Processor p=cpu.new Processor();
+cpuinfo.Ram r=new cpuinfo.Ram();
+Scanner in = new Scanner(System.in);
+System.out.println(&quot;Enter The CPU Details\n&quot;);
+System.out.print(&quot;Enter RAM Manufacture Name : &quot;);
+r.Manufacturer=in.next();
+System.out.print(&quot;Enter RAM Memory : &quot;);
+r.mem=in.nextInt();
+System.out.print(&quot;Enter Processor Manufacture Name : &quot;);
+p.Manufacturer=in.next();
+System.out.print(&quot;Enter No.Of.Cores : &quot;);
+p.cores=in.next();
+System.out.print(&quot;Enter CPU Price : &quot;);
+cpu.price=in.nextInt();
+System.out.println(&quot;\nCPU Details&quot;);
+System.out.println(&quot;\nRAM Manufacture Name : &quot;+ r.Manufacturer);
+System.out.println(&quot;RAM Memory : &quot;+ r.mem);
+System.out.println(&quot;Processor Manufacture Name : &quot;+ p.Manufacturer);
+System.out.println(&quot;No.Of.Cores : &quot;+ p.cores);
+System.out.println(&quot;CPU Price : &quot;+ cpu.price);
+
+} }
