@@ -1,0 +1,32 @@
+import java.io.*;
+import java.net.*;
+public class TCPserver
+{
+public static void main(String a[]) throws Exception
+{
+System.out.println(&quot;TCP SERVER&quot;);
+System.out.println(&quot;Server is ready to connect&quot;);
+ServerSocket serversoc=new ServerSocket(9);
+Socket clientsoc=serversoc.accept();
+PrintWriter out=new PrintWriter(clientsoc.getOutputStream(),true);
+
+BufferedReader in=new BufferedReader(new
+InputStreamReader(clientsoc.getInputStream()));
+String inputline;
+BufferedReader stdin=new BufferedReader(new
+InputStreamReader(System.in));
+try
+{
+while(true)
+{
+inputline=stdin.readLine();
+out.println(inputline);
+System.out.println(&quot;Client says: &quot;+ in.readLine());
+}
+}
+catch(Exception e)
+{
+System.exit(0);
+}
+}
+}
