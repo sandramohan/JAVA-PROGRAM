@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class arraylarge {
+public static void main(String[] args) {
+int n;
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter number of elements:&quot;);
+n=reader.nextInt();
+int num[]=new int[n];
+System.out.print(&quot;Enter array elements:&quot;);
+for(int i=0;i&lt;n;i++)
+{
+num[i]=reader.nextInt();
+}
+int max=num[0];
+for(int i=0;i&lt;n;i++)
+{
+if(max&lt;num[i])
+
+{
+max=num[i];
+}
+}
+System.out.print(&quot;Largest value in array is &quot;+max);
+}
+}
