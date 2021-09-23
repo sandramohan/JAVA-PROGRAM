@@ -1,0 +1,69 @@
+import java.util.Scanner;
+class symmat {
+public static void main(String[] args) {
+int row1,col1,i,j,f=1;
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter number of rows:&quot;);
+row1 = reader.nextInt();
+System.out.print(&quot;Enter number of colums:&quot;);
+col1 = reader.nextInt();
+int a[][] = new int[row1][col1];
+int b[][]=new int[row1][col1];
+
+System.out.println(&quot;Enter the elements of MAT1:&quot;);
+for ( i = 0; i &lt; row1; i++)
+{
+for(j=0; j&lt;col1; j++)
+{
+a[i][j] = reader.nextInt();
+}
+}
+System.out.print(&quot;MATRIX 1 :\n&quot;);
+for ( i = 0; i &lt; row1; i++)
+{
+for (j =0; j &lt; col1; j++)
+{
+System.out.print(a[i][j]+&quot; &quot;);
+}
+
+System.out.println();
+
+}
+if(row1==col1)
+{
+for (i = 0; i &lt; row1; i++)
+{
+for (j =0; j&lt; col1;j++)
+{
+b[i][j]=a[j][i];
+}
+}
+
+System.out.print(&quot;TRANSPOSE:\n&quot;);
+for ( i = 0; i &lt; row1; i++)
+{
+for (j =0; j &lt; col1; j++)
+{
+System.out.print(b[i][j]+&quot; &quot;);
+}
+
+System.out.println();
+
+}
+}
+for(i=0;i&lt;row1;i++)
+{
+for(j=0;j&lt;col1;j++)
+{
+if(a[i][j]!=b[i][j])
+{
+f=0;
+break;
+}
+}
+}
+if(f==0)
+System.out.print(&quot;The matrix is not symmetric&quot;);
+else System.out.print(&quot;The matrix is symmetrix&quot;);
+}
+}
