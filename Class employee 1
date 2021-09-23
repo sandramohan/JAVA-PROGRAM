@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class employee {
+int empid;
+String name;
+float salary;
+String address;
+public employee() {
+empid = 0;
+name = &quot; &quot;;
+salary = 0;
+address = &quot; &quot;;
+}
+public void input() {
+Scanner reader = new Scanner(System.in);
+
+System.out.print(&quot;Enter the employee number : &quot;);
+empid = reader.nextInt();
+System.out.print(&quot;Enter the employee name : &quot;);
+name = reader.next();
+System.out.print(&quot;Enter the employee salary : &quot;);
+salary = reader.nextFloat();
+System.out.print(&quot;Enter the employee address : &quot;);
+address = reader.next();
+}
+}
+class teacher extends employee {
+String dept,sub;
+//String sub[];
+public teacher(){
+dept=&quot; &quot;;
+sub=&quot; &quot;;
+}
+public void data() {
+//int m;
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter the department : &quot;);
+dept = reader.next();
+//System.out.print(&quot;Enter the number of subjects: &quot;);
+//m=reader.nextInt();
+//String[] sub=new String[50];
+System.out.print(&quot;Enter the subject taught : &quot;);
+sub=reader.next();
+//for (int i = 0; i&lt;m; i++){
+// sub[i] = reader.nextLine();
+// }
+}
+public void output() {
+System.out.println(&quot;Employee id = &quot; + empid);
+System.out.println(&quot;Employee name = &quot; + name);
+System.out.println(&quot;Employee salary = &quot; + salary);
+System.out.println(&quot;Employee address = &quot; + address);
+System.out.println(&quot;Employee department = &quot; + dept);
+System.out.println(&quot;Subject taught = &quot;+sub);
+//for (int i=0; i&lt;sub.length; i++) {
+// System.out.println(sub[i]+&quot; &quot;);
+
+//}
+}
+public static void main(String[] args) {
+int n;
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter the number of Employees: &quot;);
+n = reader.nextInt();
+teacher t[] = new teacher[n];
+for (int i = 0; i &lt; n; i++) {
+t[i] = new teacher();
+t[i].input();
+t[i].data();
+System.out.print(&quot;\n&quot;);
+}
+System.out.println(&quot;EMPLOYEE DETAILS: &quot;);
+for (int i = 0; i &lt; n; i++) {
+t[i].output();
+System.out.print(&quot;\n&quot;);
+}
+}
+}
