@@ -1,0 +1,44 @@
+package graphicss;
+import java.util.Scanner;
+interface areafigure {
+void tri();
+void rect();
+void sqr();
+void cir();
+}
+public class fig{
+Scanner reader=new Scanner(System.in);
+void tri(){
+System.out.print(&quot;\n Enter the breadth and height of triangle: &quot;);
+float b=reader.nextFloat();
+float h=reader.nextFloat();
+System.out.print(&quot;The area of triangle is: &quot;+(0.5*(b*h)));
+}
+void rect(){
+System.out.print(&quot;\n\n Enter the length and breadth of rectangle: &quot;);
+float l=reader.nextFloat();
+
+float b=reader.nextFloat();
+System.out.print(&quot;The area of rectangle is: &quot;+(l*b));
+}
+void sqr(){
+System.out.print(&quot;\n\n Enter the side of square: &quot;);
+float s=reader.nextFloat();
+System.out.print(&quot;The area of square is: &quot;+(s*s));
+}
+void cir() {
+System.out.print(&quot;\n\n Enter the radius of circle: &quot;);
+float r = reader.nextFloat();
+System.out.print(&quot;The area of circle is: &quot; + (3.14 * r * r));
+}
+}
+package graphicss;
+public class figarea{
+public static void main(String[] args) {
+fig f = new fig();
+f.tri();
+f.rect();
+f.sqr();
+f.cir();
+}
+}
