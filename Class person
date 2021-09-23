@@ -1,0 +1,97 @@
+import java.util.Scanner;
+public class person {
+String name,gender,address;
+
+int age;
+public person(){
+name=&quot; &quot;;
+gender=&quot; &quot;;
+address=&quot; &quot;;
+age=0;
+}
+public void pinput(){
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;\nEnter name: &quot;);
+name=reader.next();
+System.out.print(&quot;Enter gender :&quot;);
+gender=reader.next();
+System.out.print(&quot;Enter address: &quot;);
+address=reader.next();
+System.out.print(&quot;Enter the age: &quot;);
+age=reader.nextInt();
+}
+}
+class Employee extends person{
+int empid;
+String comp_name,qualification;
+float sal;
+public Employee(){
+empid=0;
+comp_name=&quot; &quot;;
+qualification=&quot; &quot;;
+sal=0;
+}
+public void einput(){
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter the employee id: &quot;);
+empid=reader.nextInt();
+System.out.print(&quot;Enter company name: &quot;);
+comp_name=reader.next();
+System.out.print(&quot;Enter qualification: &quot;);
+qualification=reader.next();
+System.out.print(&quot;Enter salary: &quot;);
+sal=reader.nextFloat();
+}
+
+}
+class Teacher extends Employee{
+String subject,dept;
+int tid;
+public Teacher(){
+subject=&quot; &quot;;
+dept=&quot; &quot;;
+tid=0;
+}
+public void tinput(){
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter subject: &quot;);
+subject=reader.next();
+System.out.print(&quot;Enter department: &quot;);
+dept=reader.next();
+System.out.print(&quot;Enter teacher id: &quot;);
+tid=reader.nextInt();
+}
+public void output(){
+System.out.println(&quot;\nNAME: &quot;+name);
+System.out.println(&quot;GENGER: &quot;+gender);
+System.out.println(&quot;ADDRESS: &quot;+address);
+System.out.println(&quot;AGE: &quot;+age);
+System.out.println(&quot;EMPLOYEE ID: &quot;+empid);
+System.out.println(&quot;COMPANY NAME: &quot;+comp_name);
+System.out.println(&quot;QUALIFICATION: &quot;+qualification);
+System.out.println(&quot;SALARY: &quot;+sal);
+System.out.println(&quot;SUBJECT: &quot;+subject);
+System.out.println(&quot;DEPARTMENT: &quot;+dept);
+System.out.println(&quot;TEACHER ID: &quot;+tid+&quot;\n&quot;);
+}
+public static void main(String[] args) {
+int n;
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter the limit: &quot;);
+n = reader.nextInt();
+Teacher t[] = new Teacher[n];
+for (int i = 0; i &lt; n; i++) {
+t[i] = new Teacher();
+t[i].pinput();
+
+System.out.print(&quot;\n&quot;);
+t[i].einput();
+System.out.print(&quot;\n&quot;);
+t[i].tinput();
+}
+for (int i=0;i&lt;n;i++){
+System.out.print(&quot;\nEMPLOYEE DETAILS: &quot;);
+t[i].output();
+}
+}
+}
