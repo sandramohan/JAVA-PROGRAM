@@ -25,4 +25,3 @@ acircle.area(r);
 acircle.circumference(r);
 }
 }
-16:Product
