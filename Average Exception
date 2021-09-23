@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.lang.Exception;
+public class avg {
+public static void main(String[] args){
+try {
+int i, n, sum=0;
+double average=0;
+int elem[]=new int[40];
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter number of elements: &quot;);
+n = reader.nextInt();
+System.out.println(&quot;Enter elements: &quot;);
+for (i = 0; i &lt; n; i++) {
+elem[i] = reader.nextInt();
+if (elem[i] &lt; 0){
+throw new Exception(&quot;Number is negative&quot;);
+}
+//System.out.print(elem[i]);
+}
+for(i=0;i&lt;n;i++) {
+if (elem[i] &gt;= 0) {
+sum = elem[i] + sum;
+}
+}
+average = sum/n;
+System.out.print(&quot;\nAverage is &quot; +average);
+}
+catch (Exception e) {
+System.out.println(e);
+}
+}
+}
