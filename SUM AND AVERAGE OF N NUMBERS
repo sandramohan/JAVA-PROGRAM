@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class sumavg {
+public static void main(String[] args) {
+int n,sum=0;
+float avg=0;
+Scanner reader=new Scanner(System.in);
+System.out.print(&quot;Enter number of elements:&quot;);
+n=reader.nextInt();
+int num[]=new int[n];
+System.out.print(&quot;Enter array elements:&quot;);
+
+for(int i=0;i&lt;n;i++)
+{
+num[i]=reader.nextInt();
+}
+for(int i=0;i&lt;n;i++)
+{
+sum=sum+num[i];
+}
+avg=(float)sum/n;
+System.out.println(&quot;Sum of elements : &quot;+sum);
+System.out.println(&quot;Average of elements : &quot;+avg);
+}
+}
