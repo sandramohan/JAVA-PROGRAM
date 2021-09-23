@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class arrayasc {
+public static void main(String[] args) {
+int n, temp;
+
+Scanner reader = new Scanner(System.in);
+System.out.print(&quot;Enter number of elements:&quot;);
+n = reader.nextInt();
+int a[] = new int[n];
+System.out.println(&quot;Enter the elements:&quot;);
+for (int i = 0; i &lt; n; i++)
+{
+a[i] = reader.nextInt();
+}
+for (int i = 0; i &lt; n; i++)
+{
+for (int j = i + 1; j &lt; n; j++)
+{
+if (a[i] &gt; a[j])
+{
+temp = a[i];
+a[i] = a[j];
+a[j] = temp;
+}
+}
+}
+System.out.print(&quot;Ascending Order:&quot;);
+for (int i = 0; i &lt; n; i++)
+{
+System.out.print(a[i] + &quot; &quot;);
+}
+
+}
+}
